@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { setSortBy } from './redux/actions/FilltersAction';
 import classes from './Sort.module.css';
 
-const names = ['Audi', 'Honda', 'Hyundai', 'Kia', 'Mitsubishi', 'Volkswagen', 'Mercedes-Benz'];
+const names = ['Audi', 'Hyundai', 'Kia', 'Mitsubishi', 'Volkswagen', 'Mercedes-Benz'];
 
 const Sort = React.memo(function Sort({ items }) {
   const { sortBy } = useSelector(({ fillters }) => fillters);
