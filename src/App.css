@@ -138,6 +138,11 @@
   opacity: 1;
 }
 
+#radio {
+  background: #525559 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
 .mainmenubtn {
   margin-top: 10px;
   padding-left: 26px;

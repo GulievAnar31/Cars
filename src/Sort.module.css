@@ -1,0 +1,178 @@
+.carElem {
+    display: inline-block;
+    margin: 50px;
+    width: 404px;
+    height: 506px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 6px 32px #0E2A6029;
+    border-radius: 8px;
+    opacity: 1;
+}
+
+.carElem img {
+    margin-top: 8px;
+    width: 264px;
+    height: 198px;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+#name {
+    width: 329px;
+    height: 34px;
+    text-align: left;
+    opacity: 1;
+    white-space: nowrap;
+}
+
+#vin {
+    width: 117px;
+    height: 13px;
+    text-align: left;
+    font: normal normal normal 10px/13px Roboto;
+    letter-spacing: 1px;
+    color: #707B8C;
+    opacity: 1;
+}
+
+#by {
+    float: right;
+    margin-right: 50px;
+    width: 182px;
+    height: 48px;
+    background: linear-gradient(255deg, #11998E 0%, #38EF7D);
+    border-radius: 8px;
+    opacity: 1;
+    text-align: center;
+    font: normal normal medium 10px/13px Roboto;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+#price {
+    float: right;
+    text-align: left;
+    font: normal normal normal 28px/28px Roboto;
+    letter-spacing: 0px;
+    color: #22BF86;
+    opacity: 1;
+}
+
+.carElem p {
+    margin-left: 26px;
+    width: 180px;
+    height: 17px;
+    text-align: left;
+    font: normal normal normal 14px/48px Roboto;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+
+#txtInCar {
+    margin-left: 26px;
+    color: var(--unnamed-color-acb8bf);
+    text-align: left;
+    font: normal normal normal 10px/48px Roboto;
+    letter-spacing: 1px;
+    color: #ACB8BF;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+#sortBtn {
+    top: 412px;
+    left: 82px;
+    width: 276px;
+    height: 56px;
+    background: #35373A 0% 0% no-repeat padding-box;
+    border-radius: 4px 4px 0px 0px;
+    opacity: 1;
+}
+
+#item {
+    text-align: left;
+    font: normal normal normal 14px/24px Roboto;
+    letter-spacing: 0px;
+    color: #BABABA;
+    opacity: 1;
+}
+
+#radio {
+    background: #525559 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.mainmenubtn {
+    margin-top: 10px;
+    padding-left: 26px;
+    width: 276px;
+    height: 56px;
+    background: #35373A 0% 0% no-repeat padding-box;
+    border-radius: 4px 4px 0px 0px;
+    opacity: 1;
+    text-align: left;
+    font: normal normal normal 16px/24px Roboto;
+    letter-spacing: 0.16px;
+    color: #FFFFFFDE;
+    opacity: 1;
+}
+
+.mainmenubtn:hover {
+    width: 276px;
+    height: 56px;
+    background: #35373A 0% 0% no-repeat padding-box;
+    border-radius: 4px 4px 0px 0px;
+    opacity: 1;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-child {
+    display: none;
+    background: #35373A 0% 0% no-repeat padding-box;
+    min-width: 200px;
+}
+
+.dropdown-child a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+input[name=field] {
+    display: none;
+}
+
+input[name=field]+label {
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #555;
+}
+
+input[name=field]:checked+label {
+    background: green;
+}
+
+#saveForm {
+    pointer-events: none;
+    background: #ccc;
+    color: #888;
+}
+
+input[name=field]:checked+label~#saveForm {
+    pointer-events: auto;
+    background: green;
+    color: #fff;
+}
