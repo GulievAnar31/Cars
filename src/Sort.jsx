@@ -3,7 +3,7 @@ import { fetchCars } from './redux/actions/CarsAction';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { setSortBy } from './redux/actions/FilltersAction';
-import classes from './Sort.module.css';
+
 
 const names = ['Audi', 'Hyundai', 'Kia', 'Mitsubishi', 'Volkswagen', 'Mercedes-Benz'];
 
@@ -26,7 +26,7 @@ const Sort = React.memo(function Sort({ items }) {
     return (
       <p id = 'item'>
         <input
-          id = {classes.radio}
+          id = 'radio'
           type="radio"
           key={index}
           checked = {activeItem == index ? true : false}
@@ -42,7 +42,7 @@ const Sort = React.memo(function Sort({ items }) {
   let elems = Object.values(items);
   let elem = elems.map((item, index) => {
     return (
-      <div className={classes.carElem} onClick={() => console.log(item)} key={index}>
+      <div className='carElem' onClick={() => console.log(item)} key={index}>
         <p id="name">{item.feedData.modelName}</p>
         <p id="vin">{item.vin}</p>
         <img
