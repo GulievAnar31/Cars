@@ -3,6 +3,7 @@ import { fetchCars } from './redux/actions/CarsAction';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { setSortBy } from './redux/actions/FilltersAction';
+import classes from './sort.module.css';
 
 
 const names = ['Audi', 'Hyundai', 'Kia', 'Mitsubishi', 'Volkswagen', 'Mercedes-Benz'];
@@ -42,9 +43,9 @@ const Sort = React.memo(function Sort({ items }) {
   let elems = Object.values(items);
   let elem = elems.map((item, index) => {
     return (
-      <div className='carElem' onClick={() => console.log(item)} key={index}>
-        <p id="name">{item.feedData.modelName}</p>
-        <p id="vin">{item.vin}</p>
+      <div className={classes.carElem} onClick={() => console.log(item)} key={index}>
+        <p className={classes.name}>{item.feedData.modelName}</p>
+        <p className={classes.vin}>{item.vin}</p>
         <img
           src={
             item.photobank.imgs[0].url
@@ -53,15 +54,15 @@ const Sort = React.memo(function Sort({ items }) {
           }
           alt=""
         />
-        <p id="price">{item.legacy.price} ₽</p>
-        <p id="txtInCar">Двигатель</p>
+        <p className={classes.price}>{item.legacy.price} ₽</p>
+        <p className={classes.txtInCar}>Двигатель</p>
         <p>
           /{item.feedData.enginePower}лс / {item.feedData.engineType} /
         </p>
-        <p id="txtInCar">КПП</p>
+        <p className={classes.txtInCar}>КПП</p>
         <p>{item.feedData.transmission}</p>
-        <input id='by' type="submit" value='Купить' />
-        <p id="txtInCar">Пробег</p>
+        <input className={classes.by} type="submit" value='Купить' />
+        <p className={classes.txtInCar}>Пробег</p>
         <p>{item.feedData.autoProbeg}</p>
       </div>
     );
@@ -76,9 +77,9 @@ const Sort = React.memo(function Sort({ items }) {
   });
   return (
     <div>
-      <div class="dropdown">
-        <button class="mainmenubtn">Марка</button>
-        <div class="dropdown-child">{itemsSort}</div>
+      <div className="dropdown">
+        <button className={classes.mainmenubtn}>Марка</button>
+        <div className="dropdown-child">{itemsSort}</div>
       </div>
       <div className="elements">{elem}</div>
     </div>
